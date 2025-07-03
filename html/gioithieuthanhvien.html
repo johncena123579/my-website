@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+    <!-- link thong bao -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Link icon -->
+  <link rel="stylesheet" href="../asset/fontawesome-free-6.5.1-web/css/all.min.css">
+  <!-- Link boostrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Giới Thiệu Thành Viên</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- header -->
+    <header id="header">
+      <div class="header__link">
+        <ul>
+          <li><a href="../html/gioithieuthanhvien.html"><img src="../img/logo/logo.png" alt="" class="header__loogo">
+            </a></li>
+          <li><a href="../html/trangchu.html" class="header__item">Trang chủ</a></li>
+          <li>
+            <a class="header__item">Văn Học </a>
+            <ul class="dropdown">
+              <li><a href="../html/VanHocVietNam.html">Văn học Việt Nam</a></li>
+              <li><a href="../html/VanHocNuocNgoai.html">Văn Học Nước Ngoài</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Khoa học</a>
+            <ul class="dropdown">
+              <li><a href="../html/KhoaHocTuNhien.html">Khoa học tự nhiên</a></li>
+              <li><a href="../html/CongNghe.html">Công nghệ</a></li>
+              <li><a href="../html/LichSu.html">Lịch Sử</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Kỹ năng sống</a>
+            <ul class="dropdown">
+              <li><a href="../html/SachTamLy.html">Tâm lý học</a></li>
+              <li><a href="../html/sachKinhDoanh.html">Kinh doanh</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Thiếu nhi</a>
+            <ul class="dropdown">
+              <li><a href="../html/TruyenTranh.html">Truyện tranh</a></li>
+              <li><a href="../html/KienThucKhoaHoc.html">Kiến thức khoa học</a></li>
+
+            </ul>
+          </li>
+          <li><a href="../html/banchay.html" class="header__item header__item-best-seller">
+              <i></i>Sách bán chạy
+            </a></li>
+          <li>
+            <div class="header__item header__item-search">
+              <input type="text" class="header__item-btn" placeholder="Tìm kiếm..">
+              <i class="fa-solid fa-magnifying-glass header__item-btn--icon"></i>
+            </div>
+          </li>
+          <li><a href="../html/dangnhap.html" class="header__item header__item-user">
+              <i class="fa-solid fa-user"></i>
+            </a></li>
+          <li>
+            <a href="../html/giohang.html" class="header__item header__item-cart position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="position-absolute  badge rounded-pill bg-danger">
+                0
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Content main -->
+    <div id="container" class="container-fluid pt-4 p-0">
+      <main class="container p-4 bg-white">
+        <h2 class="text-center fs-1 text-uppercase">Giới thiệu thành viên</h2>
+        <div class="card-group">
+          <div class="card m-4 border-0">
+            <img src="../img/thanhVien/profile.jpg" alt="Linh" class="w-100 content__item-img">
+            <div class="card-body ">
+              <p class="fs-3 p-2 m-0">Hồ Quang Linh<br> DHKHMT19ATT <br> 23643951</p>
+            </div>
+          </div>
+          <div class="card m-4 border-0">
+            <img src="../img/thanhVien/profile.jpg" alt="Phú" class="w-100 content__item-img">
+            <div class="card-body">
+              <p class="fs-3 p-2 m-0">Nguyễn Phạm Phong Phú<br>DHKHMT19ATT<br>23641801</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" text-center text-lg-start text-white container-fluid p-0" id="footer">
+      <div class="container p-4">
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Xem thêm sách khác</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="../html/banchay.html" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bán
+                  Chạy</a>
+              </li>
+              <li>
+                <a href="../html/gioithieuthanhvien.html" class="text-white"><i
+                    class="fas fa-user-edit fa-fw fa-sm me-2"></i>Tác giả</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Nhà Xuất Bản</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-white">The BookShop</a>
+              </li>
+              <li>
+                <a class="text-white">12 Nguyễn Văn Bảo, Gò Vấp</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Liên hệ với chúng tôi</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="../html/dangky.html" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Tham gia
+                  BookShop</a>
+              </li>
+              <li>
+                <a href="../html/giohang.html" class="text-white"><i
+                    class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Theo dõi đơn
+                  hàng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- bản quyền -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Generated by Hồ Quang Linh (23643951) & Nguyễn Phạm Phong Phú (23641801)
+        <a class="text-white" href="https://mdbootstrap.com/"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

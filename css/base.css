@@ -1,0 +1,274 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --pink-color: #fbefee;
+  --text-pink-color: #c58787;
+}
+
+@keyframes textAnimation {
+  to {
+    opacity: 0.5;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+/* Header */
+#header {
+  padding: 0 10 px;
+  background-color: #f7fff7;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header__loogo {
+  padding-top: 5px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.header__link > ul {
+  display: flex;
+  flex-wrap: wrap; /* nếu quá nhiều mục, nó sẽ xuống hàng */
+  justify-content: space-between; /* mặc định desktop */
+  align-items: center;
+  margin: 0 auto; /* canh giữa block */
+  padding: 0;
+  list-style: none;
+}
+ul.header__link > li {
+  position: relative;
+}
+.header__link ul li {
+  display: inline-block;
+  position: relative; /* hoặc bỏ luôn nếu không cần */
+  padding: 2px;
+}
+
+.header__link ul li a {
+  display: block;
+  padding: 2px 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Dropdown menu */
+ul li ul.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: white;
+  display: block;
+  opacity: 1;
+  visibility: hidden;
+  transform: translateY(10px); /* Tạo hiệu ứng trượt xuống */
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 2px 3px #ffddab;
+  padding: 0;
+  margin: 0;
+}
+
+/* Khi hover thì hiển thị dropdown */
+ul li:hover ul.dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown item */
+ul li ul.dropdown li {
+  display: block;
+  padding: 10px 20px;
+}
+
+/* Link trong dropdown */
+ul li ul.dropdown li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hover effect */
+ul li ul.dropdown li a:hover {
+  background-color: #ffddab;
+  border-radius: 15px;
+}
+
+.header__link {
+  /* text-decoration: none;
+  list-style-type: none; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__item-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 32px;
+  background-color: #f7fff7;
+  border: none;
+  outline: none;
+  padding: 0 18px 0 38px;
+}
+
+.header__item-search {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.header__item-btn--icon {
+  position: absolute;
+  left: 10x;
+  top: 10px;
+  font-size: 20px;
+  z-index: 1;
+}
+#cart-count { 
+  color:white;
+  height:25px;
+  width: 30px;
+  text-align: middle;
+}
+
+
+
+.header__item-cart,
+.header__item-user {
+  color: black;
+  height: 68px;
+  width: 50px;
+  text-align: center;
+}
+.header__item-user > i,.header__item-cart > i {
+  vertical-align: middle;
+  padding-top: 15px;
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 15px;
+}
+
+.header__item {
+  font-size: 18px;
+  color: var(--black-color);
+  text-decoration: none;
+  letter-spacing: 1.6px;
+}
+
+.header__item:hover {
+  color: #945034;
+  font-weight: bold;
+  transition: textAnimation ease-in 0.3;
+}
+
+/* Footer */
+#footer {
+  /* font-size: 18px;
+  height: 230px; */
+  background-color: #5f8b4c;
+  /* color: white;
+  letter-spacing: 1.6px;
+  overflow: hidden; */
+}
+
+/* .footer__content {
+  margin: 24px 0;
+} */
+/* 
+.footer__contact {
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+} */
+
+.footer__links {
+  margin: 8px 0 0 32px;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 50% 50%;
+}
+
+#footer_decor ul li a {
+  text-decoration: none;
+}
+
+/* Đăng nhập */
+#bt_DN {
+  background-color: #5f8b4c;
+}
+#card1 {
+  color: white;
+}
+#fa1 {
+  background-color: #5f8b4c;
+  margin: 0 50px;
+  width: 100px;
+  height: 30px;
+}
+#fa2 {
+  background-color: #5f8b4c;
+  margin: 0 50px;
+  width: 100px;
+  height: 30px;
+}
+#icon1 {
+  width: 60px;
+  height: 60px;
+}
+#icon2 {
+  width: 60px;
+  height: 60px;
+}
+#p_1 {
+  font-style: italic;
+}
+#DangNhap_khac {
+  display: flex;
+  justify-content: center;
+}
+#card-tong {
+  background-color: #f7fff7;
+}
+
+/* Đăng ký */
+#h2 {
+  position: relative;
+  top: 50px;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline;
+  right: 400px;
+  top: 300px;
+}
+#form_DK {
+  position: relative;
+  top: 50px;
+  left: 200px;
+}
+#btn_DK {
+  background-color: #5f8b4c;
+  position: relative;
+  top: 20px;
+}
+
+/* Slider */
+#img1 {
+  width: 980px;
+  height: 780px;
+}
+#img2 {
+  width: 980px;
+  height: 780px;
+}
+#img3 {
+  width: 880px;
+  height: 680px;
+}

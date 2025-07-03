@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+  <!-- Link icon -->
+  <link rel="stylesheet" href="../asset/fontawesome-free-6.5.1-web/css/all.min.css">
+  <!-- link thong bao -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Link boostrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Sách Lịch Sử</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- header -->
+    <header id="header">
+      <div class="header__link">
+        <ul>
+          <li><a href="../html/gioithieuthanhvien.html"><img src="../img/logo/logo.png" alt="" class="header__loogo">
+            </a></li>
+          <li><a href="../html/trangchu.html" class="header__item">Trang chủ</a></li>
+          <li>
+            <a class="header__item">Văn Học </a>
+            <ul class="dropdown">
+              <li><a href="../html/VanHocVietNam.html">Văn học Việt Nam</a></li>
+              <li><a href="../html/VanHocNuocNgoai.html">Văn Học Nước Ngoài</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Khoa học</a>
+            <ul class="dropdown">
+              <li><a href="../html/KhoaHocTuNhien.html">Khoa học tự nhiên</a></li>
+              <li><a href="../html/CongNghe.html">Công nghệ</a></li>
+              <li><a href="../html/LichSu.html">Lịch Sử</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Kỹ năng sống</a>
+            <ul class="dropdown">
+              <li><a href="../html/SachTamLy.html">Tâm lý học</a></li>
+              <li><a href="../html/sachKinhDoanh.html">Kinh doanh</a></li>
+            </ul>
+          </li>
+          <li><a class="header__item">Thiếu nhi</a>
+            <ul class="dropdown">
+              <li><a href="../html/TruyenTranh.html">Truyện tranh</a></li>
+              <li><a href="../html/KienThucKhoaHoc.html">Kiến thức khoa học</a></li>
+            </ul>
+          </li>
+          <li><a href="../html/banchay.html" class="header__item header__item-best-seller">
+              <i></i>Sách bán chạy
+            </a></li>
+          <li>
+            <div class="header__item header__item-search">
+              <input type="text" class="header__item-btn" placeholder="Tìm kiếm..">
+              <i class="fa-solid fa-magnifying-glass header__item-btn--icon"></i>
+            </div>
+          </li>
+          <li><a href="../html/dangnhap.html" class="header__item header__item-user">
+              <i class="fa-solid fa-user"></i>
+            </a></li>
+          <li>
+            <a href="../html/giohang.html" class="header__item header__item-cart position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="position-absolute  badge rounded-pill bg-danger">
+                0
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- slide -->
+    <div class="container my-4">
+      <div class="row">
+        <!-- Slide lớn bên trái -->
+        <div class="col-lg-8 col-md-12">
+          <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner rounded-3">
+              <div class="carousel-item active">
+                <img src="../img/slider/banner1.jpg" class="d-block w-100" alt="banner1">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/slider/banner2.jpg" class="d-block w-100" alt="banner2">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/slider/banner3.png" class="d-block w-100" alt="banner3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hai ảnh nhỏ bên phải -->
+        <div class="col-lg-4 col-md-12 mt-3 mt-lg-0 d-flex flex-column gap-3">
+          <img src="../img/slider/minislider2.jpg" class="img-fluid rounded-3 shadow-sm" alt="small1">
+          <img src="../img/slider/minislider2.png" class="img-fluid rounded-3 shadow-sm" alt="small2">
+        </div>
+      </div>
+    </div>
+    <!-- Content main -->
+    <div id="container" class="container-fluid pt-4 p-0">
+      <main class="container p-4 bg-white">
+        <!-- Component 3 -->
+        <div class="card-group">
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/sapiens.jpg" alt="Sapiens" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Sapiens: Lược sử về loài người</h4>
+              <p class="text-danger fs-4">150.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger"
+                onclick="addToCart('Sapiens: Lược sử về loài người',150000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/sungvitrung.jpg" alt="sungvitrung" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Súng, vi trùng và thép</h4>
+              <p class="text-danger fs-4">200.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger"
+                onclick="addToCart('Súng, vi trùng và thép', 200000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/viet nam su luoc.jpg" alt="viet nam su luoc" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Việt Nam Sử Lược - Trần Trọng Kim</h4>
+              <p class="text-danger fs-4">70.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger" onclick="addToCart('Việt Nam Sử Lược', 70000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Component 4 -->
+        <div class="card-group">
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/lich-su-van-vat_1.jpg" alt="lich-su-van-vat_1" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Lịch sử vạn vật</h4>
+              <p class="text-danger fs-4">120.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger" onclick="addToCart('Lịch sử vạn vật', 120000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/TramNamNhinLai.png" alt="TramNamNhinLai" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Trăm năm nhìn lại</h4>
+              <p class="text-danger fs-4">60.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger" onclick="addToCart('Trăm năm nhìn lại', 60000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card m-4 border-0">
+            <img src="../img/sachvanhoc/lichsu/sach-lich-su-nen-doc.jpg" alt="sach-lich-su" class="content__item-img">
+            <div class="content__item-desc">
+              <h4 class="item__desc-productsname">Lược sử thế giới</h4>
+              <p class="text-danger fs-4">230.000 đ</p>
+              <button class="item__desc-btn btn btn-outline-danger" onclick="addToCart('Lược sử thế giới', 230000)">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" text-center text-lg-start text-white container-fluid p-0" id="footer">
+      <div class="container p-4">
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Xem thêm sách khác</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="../html/banchay.html" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bán
+                  Chạy</a>
+              </li>
+              <li>
+                <a href="../html/gioithieuthanhvien.html" class="text-white"><i
+                    class="fas fa-user-edit fa-fw fa-sm me-2"></i>Tác giả</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Nhà Xuất Bản</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-white">The BookShop</a>
+              </li>
+              <li>
+                <a class="text-white">12 Nguyễn Văn Bảo, Gò Vấp</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="footer_decor">
+            <h5 class="text-uppercase">Liên hệ với chúng tôi</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="../html/dangky.html" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Tham gia
+                  BookShop</a>
+              </li>
+              <li>
+                <a href="../html/giohang.html" class="text-white"><i
+                    class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Theo dõi đơn
+                  hàng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- bản quyền -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Generated by Hồ Quang Linh (23643951) & Nguyễn Phạm Phong Phú (23641801)
+        <a class="text-white" href="https://mdbootstrap.com/"></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.btn_custom {
+  background-color: var( --white-color) !important;
+  color: #4a0a24 !important;
+}
+
+.btn_custom:hover {
+  opacity: .9;
+  color: #000 !important;
+}

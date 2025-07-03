@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo/logo - Copy.png" type="image/x-icon">
+    <!-- link thong bao -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link icon -->
+    <link rel="stylesheet" href="../asset/fontawesome-free-6.5.1-web/css/all.min.css">
+    <!-- Link boostrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Giỏ Hàng</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header">
+            <div class="header__link">
+                <ul>
+                    <li><a href="../html/gioithieuthanhvien.html"><img src="../img/logo/logo.png" alt=""
+                                class="header__loogo">
+                        </a></li>
+                    <li><a href="../html/trangchu.html" class="header__item">Trang chủ</a></li>
+                    <li>
+                        <a class="header__item">Văn Học </a>
+                        <ul class="dropdown">
+                            <li><a href="../html/VanHocVietNam.html">Văn học Việt Nam</a></li>
+                            <li><a href="../html/VanHocNuocNgoai.html">Văn Học Nước Ngoài</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="header__item">Khoa học</a>
+                        <ul class="dropdown">
+                            <li><a href="../html/KhoaHocTuNhien.html">Khoa học tự nhiên</a></li>
+                            <li><a href="../html/CongNghe.html">Công nghệ</a></li>
+                            <li><a href="../html/LichSu.html">Lịch Sử</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="header__item">Kỹ năng sống</a>
+                        <ul class="dropdown">
+                            <li><a href="../html/SachTamLy.html">Tâm lý học</a></li>
+                            <li><a href="../html/sachKinhDoanh.html">Kinh doanh</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="header__item">Thiếu nhi</a>
+                        <ul class="dropdown">
+                            <li><a href="../html/TruyenTranh.html">Truyện tranh</a></li>
+                            <li><a href="../html/KienThucKhoaHoc.html">Kiến thức khoa học</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="../html/banchay.html" class="header__item header__item-best-seller">
+                            <i></i>Sách bán chạy
+                        </a></li>
+                    <li>
+                        <div class="header__item header__item-search">
+                            <input type="text" class="header__item-btn" placeholder="Tìm kiếm..">
+                            <i class="fa-solid fa-magnifying-glass header__item-btn--icon"></i>
+                        </div>
+                    </li>
+                    <li><a href="../html/dangnhap.html" class="header__item header__item-user">
+                            <i class="fa-solid fa-user"></i>
+                        </a></li>
+                    <li>
+                        <a href="../html/giohang.html" class="header__item header__item-cart position-relative">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count" class="position-absolute  badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- Nội dung trang giỏ hàng -->
+        <div class="container my-5">
+            <h1 class="text-center mb-4">Giỏ Hàng</h1>
+            <table class="table" style="font-size: 20px; ">
+                <thead>
+                    <tr>
+                        <th style="color:gray" scope="col">Hình Ảnh</th>
+                        <th style="color:gray" scope="col">Sản Phẩm</th>
+                        <th style="color:gray" scope="col">Đơn Giá</th>
+                        <th style="color:gray" scope="col">Số Lượng</th>
+                        <th style="color:gray" scope="col">Số Tiền</th>
+                        <th style="color:gray" scope="col">Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Các sản phẩm sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 id="total-price" class="text-primary">Tổng cộng: 0 đ</h3>
+                <button class="btn btn-outline-success btn-lg"><a href="dangnhap.html" style="color: green;text-decoration: none;">Thanh toán</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lấy giỏ hàng từ localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function displayCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Xóa nội dung trước đó
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Giỏ hàng của bạn đang trống.</p>';
+                document.getElementById('total-price').innerText = ''; // Xóa tổng giá
+                return;
+            }
+
+            let total = 0; // Biến để lưu tổng giá
+            let totalQuantity = 0; // Tổng số lượng sản phẩm
+            // Hiển thị từng sản phẩm trong giỏ hàng
+            cart.forEach((item, index) => {
+                const itemCard = document.createElement('tr'); // Đổi sang tr để phù hợp với table
+                itemCard.innerHTML = `
+                <td>
+                    <img src="../img/logo/logo.jpg" alt="${item.name}" style="width: 90px; height: 90px; border-radius:6%;">
+                </td>
+                <td>${item.name}</td>
+                <td>${item.price.toLocaleString()} đ</td>
+                <td>
+                    <input type="number" value="${item.quantity}" min="1" class="form-control" style="width: 70px;" onchange="updateQuantity(${index}, this.value)">
+                </td>
+                <td>${(item.price * item.quantity).toLocaleString()} đ</td>
+                <td><button class="btn btn-danger" onclick="removeFromCart(${index})">Xóa</button></td>
+            `;
+                cartItemsContainer.appendChild(itemCard);
+                total += item.price * item.quantity; // Cộng tổng giá
+                totalQuantity += item.quantity;
+            });
+            // Hiển thị tổng giá
+            document.getElementById('total-price').innerText = `Tổng cộng (${totalQuantity} Sản phẩm): ${total.toLocaleString()} đ`;
+        }
+
+        function removeFromCart(index) {
+            // Xóa sản phẩm khỏi giỏ hàng
+            cart.splice(index, 1);
+            // Cập nhật localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Hiển thị lại giỏ hàng
+            displayCart();
+        }
+
+        function updateQuantity(index, quantity) {
+            if (quantity < 1) {
+                quantity = 1; // Đảm bảo số lượng tối thiểu là 1
+            }
+            cart[index].quantity = parseInt(quantity); // Cập nhật số lượng
+            localStorage.setItem('cart', JSON.stringify(cart)); // Cập nhật lại localStorage
+            displayCart(); // Hiển thị lại giỏ hàng
+        }
+
+        // Gọi hàm để hiển thị giỏ hàng khi trang được tải
+        displayCart();
+    </script>
+
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
